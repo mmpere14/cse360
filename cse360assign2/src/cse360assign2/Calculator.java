@@ -11,12 +11,14 @@ package cse360assign2;
 public class Calculator {
 
 	private int total;
+	private String history = "";
 	
 	/**
 	 * Class Constructor
 	 */
 	public Calculator () {
 		total = 0;
+		history = "0";
 	}
 	
 	/**
@@ -33,6 +35,7 @@ public class Calculator {
 	 */
 	public void add (int value) {
 		total = total + value;
+		history = history + " + " + value;
 	}
 	
 	/**
@@ -41,6 +44,7 @@ public class Calculator {
 	 */
 	public void subtract (int value) {
 		total = total - value;
+		history = history + " - " + value;
 	}
 	
 	/**
@@ -49,6 +53,7 @@ public class Calculator {
 	 */
 	public void multiply (int value) {
 		total = total * value;
+		history = history + " * " + value;
 	}
 	
 	/**
@@ -60,6 +65,7 @@ public class Calculator {
 			total = total/value;
 		else
 			total = 0;
+		history = history + " / " + value;
 	}
 	
 	/**
@@ -67,6 +73,6 @@ public class Calculator {
 	 * @return  A history of all actions as a String
 	 */
 	public String getHistory () {
-		return "";
+		return history;
 	}
 }
