@@ -1,5 +1,13 @@
 package cse360assign2;
 
+/**
+ * @author Monica Perez
+ * class ID: 524
+ * Assignment: 2
+ * Description: This program performs calculator functions such as 
+ * adding,subtracting,multiplying, and dividing integers. 
+ * It also displays a history of actions and the total.
+ */
 public class Calculator {
 
 	private int total;
@@ -8,7 +16,7 @@ public class Calculator {
 	 * Class Constructor
 	 */
 	public Calculator () {
-		total = 0;  // not needed - included for clarity
+		total = 0;
 	}
 	
 	/**
@@ -16,7 +24,7 @@ public class Calculator {
 	 * @return The current total
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**
@@ -24,7 +32,7 @@ public class Calculator {
 	 * @param value An integer
 	 */
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	
 	/**
@@ -32,7 +40,7 @@ public class Calculator {
 	 * @param value an integer
 	 */
 	public void subtract (int value) {
-		
+		total = total - value;
 	}
 	
 	/**
@@ -40,7 +48,7 @@ public class Calculator {
 	 * @param value an integer
 	 */
 	public void multiply (int value) {
-		
+		total = total * value;
 	}
 	
 	/**
@@ -48,7 +56,10 @@ public class Calculator {
 	 * @param value an integer
 	 */
 	public void divide (int value) {
-		
+		if(value != 0)
+			total = total/value;
+		else
+			total = 0;
 	}
 	
 	/**
